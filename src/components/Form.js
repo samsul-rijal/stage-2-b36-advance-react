@@ -1,7 +1,10 @@
 // import React Bootstrap components here
+import {Col, Form, Row} from 'react-bootstrap';
 
 // import css modules
 import cssModules from "./Form.module.css";
+
+import LogoDW from '../assets/images/logo.png'
 
 const styles = {
   form: {
@@ -28,7 +31,7 @@ const styles = {
 };
 
 
-function Form() {
+function FormComponent() {
   return (
     <div>
       <form style={styles.form}>
@@ -64,9 +67,46 @@ function Form() {
           </select>
         </div>
         {/* code here */}
+
+        <Row>
+
+          <Col md={4}>
+            <Form.Label htmlFor="">City</Form.Label>
+            <Form.Control type='text' placeholder="First name" />
+          </Col>
+
+          <Col md={4}>
+            <Form.Label htmlFor="">City</Form.Label>
+            <Form.Control placeholder="Last name" />
+          </Col>
+          
+          <Col md={4}>
+            <Form.Label htmlFor="">City</Form.Label>
+            <Form.Control placeholder="Last name" />
+          </Col>
+
+        </Row>
+
+        <div className='row mt-3'>
+          <div className='col-md-4'>
+            <label htmlFor="" className='form-label'>test</label>
+            <input type="text" className='form-control' />
+          </div>
+          <div className='col-md-4'>
+            <label htmlFor="" className='form-label'>test</label>
+            <input type="text" className='form-control' />
+          </div>
+          <div className='col-md-4'>
+            <label htmlFor="" className='form-label'>test</label>
+            <input type="text" className='form-control' />
+          </div>
+        </div>
+
+        <img src={LogoDW} alt="" />
+
       </form>
     </div>
   )
 }
 
-export default Form
+export default FormComponent
